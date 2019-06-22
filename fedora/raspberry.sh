@@ -11,5 +11,5 @@ hostnamectl set-hostname raspberry
 
 curl https://raw.githubusercontent.com/RPi-Distro/firmware-nonfree/master/brcm80211/brcm/brcmfmac43430-sdio.txt -o /lib/firmware/brcm/brcmfmac43430-sdio.txt
 
-sh app/x2go.sh
-sh app/docker.sh
+sh apps/docker.sh
+sh apps/vnc.sh

@@ -11,4 +11,4 @@ sh apps/lxde.sh
 sh apps/compress.sh
 sh apps/java.sh
 sh apps/adobe.sh
-sh apps/vnc.sh
+sh apps/samba.sh
