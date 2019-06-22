@@ -7,4 +7,4 @@ if [ ! -e "/etc/yum.repos.d/dropbox.repo" ]; then
 	dnf clean all && dnf makecache && dnf -y update
 fi
 
-dnf -y install nautilus-dropbox python-gpgme
+dnf -y install nautilus-dropbox

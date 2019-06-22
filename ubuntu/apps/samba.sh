@@ -25,3 +25,7 @@ echo "[global]
 
 systemctl enable smbd.service
 systemctl restart smbd.service
+
+if ! pdbedit -L | grep -qE "$SUDO_USER:"; then
+	smbpasswd -a "$SUDO_USER"
+fi

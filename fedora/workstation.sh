@@ -20,7 +20,7 @@ sh apps/wine.sh
 sh apps/virtualbox.sh
 sh apps/adobe.sh
 sh apps/samba.sh
-sh apps/docker.sh
+# sh apps/docker.sh
 sh apps/dropbox.sh
 sh apps/jsawk.sh
 sh apps/vnc.sh
