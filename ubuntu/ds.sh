@@ -9,6 +9,7 @@ fi
 
 bash apps/docker.sh
 bash apps/samba.sh
+bash apps/sshd.sh
 bash apps/virtualbox.sh
 bash apps/wine.sh
 bash apps/vnc.sh
