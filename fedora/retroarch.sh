@@ -7,10 +7,9 @@ if [ $EUID -ne 0  ]; then
 	exit 1
 fi
 
-sh app/lxde.sh
+sh app/kde.sh
 sh app/compress.sh
 sh app/java.sh
-sh app/google-chrome.sh
 sh app/adobe.sh
-sh app/docker.sh
-sh app/x2go.sh
+sh app/samba.sh
+sh app/retroarch.sh

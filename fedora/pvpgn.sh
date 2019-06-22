@@ -7,10 +7,7 @@ if [ $EUID -ne 0  ]; then
 	exit 1
 fi
 
-sh app/lxde.sh
-sh app/compress.sh
-sh app/java.sh
-sh app/google-chrome.sh
-sh app/adobe.sh
-sh app/docker.sh
-sh app/x2go.sh
+hostnamectl set-hostname raspberry
+
+bash app/docker.sh
+bash app/samba.sh

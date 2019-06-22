@@ -28,7 +28,7 @@ sh app/jsawk.sh
 
 #LAN
 dnf -y install tomboy subversion git
-dnf -y install https://repo.rnt.cl/Fedora/25/x86_64/luma-3.0.7-8.fc25.noarch.rpm
+dnf -y install https://archive.fedoraproject.org/pub/fedora-secondary/releases/test/25_Alpha/Everything/aarch64/os/Packages/l/luma-3.0.7-7.fc25.noarch.rpm
 
 #Others
 dnf -y install keepass ShellCheck
