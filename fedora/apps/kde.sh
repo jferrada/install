@@ -13,4 +13,4 @@ if rpm -qa | grep ^ktorrent; then
 fi
 
 dnf -y install kde-i18n-Spanish kde-l10n-es
-dnf -y install kate kate-plugins kdiff3 krename
+dnf -y install kate kate-plugins kdiff3 krename amarok

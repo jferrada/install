@@ -25,8 +25,6 @@ sh apps/dropbox.sh
 sh apps/jsawk.sh
 sh apps/vnc.sh
 
-#LAN
 dnf -y install tomboy subversion git
-
-#Others
 dnf -y install keepass ShellCheck
+dnf -y install remmina 'remmina-plugins-*'
