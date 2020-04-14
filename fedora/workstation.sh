@@ -20,11 +20,15 @@ sh apps/wine.sh
 sh apps/virtualbox.sh
 sh apps/adobe.sh
 sh apps/samba.sh
-# sh apps/docker.sh
+sh apps/docker.sh
 sh apps/dropbox.sh
-sh apps/jsawk.sh
-sh apps/vnc.sh
+sh apps/jq.sh
+sh apps/firefox.sh
+sh apps/opera.sh
 
 dnf -y install tomboy subversion git
 dnf -y install keepass ShellCheck
 dnf -y install remmina 'remmina-plugins-*'
+dnf -y install dconf-editor
+
+sh apps/gstm.sh

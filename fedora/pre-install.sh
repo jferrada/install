@@ -12,9 +12,9 @@ dnf -y install http://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-r
 dnf clean all && dnf makecache && dnf update -y --best --allowerasing && dnf -y autoremove
 
 dnf -y install dnf-plugins-core
-dnf -y install net-tools rsync git iftop iotop htop terminator vim-enhanced sed curl wget sudo
+dnf -y install net-tools rsync git iftop iotop htop terminator vim-enhanced sed curl wget sudo coreutils moreutils
 dnf -y install aspell aspell-es hunspell hunspell-es
-dnf -y install chromium
+dnf -y install chromium chromium-libs-media-freeworld
 
 if rpm -qa | grep ^firefox; then
 	dnf -y remove firefox*
