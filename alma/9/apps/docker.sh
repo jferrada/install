@@ -1,5 +1,5 @@
 #/bin/bash
-set -euo pipefail
+#set -euo pipefail
 IFS=$'\n\t'
 
 dnf config-manager --add-repo=https://download.docker.com/linux/centos/docker-ce.repo
@@ -14,3 +14,4 @@ if [ -n "$SUDO_USER" ]; then
 		usermod -aG docker "$SUDO_USER"
 	fi
 fi
+

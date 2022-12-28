@@ -1,5 +1,5 @@
 #/bin/bash
-set -euo pipefail
+#set -euo pipefail
 IFS=$'\n\t'
 
 echo '[google-chrome]

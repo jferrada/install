@@ -22,7 +22,7 @@ sh apps/wine.sh
 sh apps/virtualbox.sh
 sh apps/samba.sh
 
-dnf -y install podman
+dnf install -y podman
 
 sh apps/jq.sh
 
@@ -33,3 +33,5 @@ dnf -y install git-crypt moreutils jq bc curl procps-ng which patch libyaml-deve
 sh apps/gstm.sh
 
 dnf -y install filezilla zsh qmmp qbittorrent keepass remmina 'remmina-plugins-*'
+
+

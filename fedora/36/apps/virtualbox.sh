@@ -13,8 +13,9 @@ if [ ! -e "/etc/yum.repos.d/virtualbox.repo" ]; then
 	yum clean all && yum -y makecache && yum -y update
 fi
 
-dnf install -y binutils gcc make patch libgomp glibc-headers glibc-devel kernel-headers kernel-devel dkms qt5-qtx11extras libxkbcommon
-dnf install -y VirtualBox-6.0
+dnf -y install @development-tools
+dnf -y install kernel-headers kernel-devel dkms elfutils-libelf-devel qt5-qtx11extras
+dnf install -y VirtualBox-6.1
 
 if groups "$user" | grep -q docker && [ "$user" != 'root' ]; then
 	usermod -aG vboxusers "$user"
