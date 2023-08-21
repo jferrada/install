@@ -20,6 +20,8 @@ if [ ! -s '/usr/local/bin/gstm' ]; then
 	chroot /compat/ubuntu /bin/bash  -c "grep -q $SUDO_USER /etc/passwd || adduser -u $uid --disabled-password --gecos '' $SUDO_USER"
 	[ ! -s '/usr/local/bin/gstm' ] && rm -f /usr/local/bin/gstm && ln -s /compat/ubuntu/usr/bin/gstm /usr/local/bin/gstm
 	[ ! -s '/usr/local/share/applications/gstm.desktop' ] && cp -f /compat/ubuntu/usr/share/applications/gstm.desktop /usr/local/share/applications/
+	mkdir -p /usr/share/pixmaps
+	[ ! -s '/usr/share/pixmaps/gSTM.png' ] && cp -f /compat/ubuntu/usr/share/gstm/pixmaps/gSTM.png /usr/share/pixmaps/gSTM.png
 	mkdir -p /usr/local/share/gstm/pixmaps/
 	[ ! -s '/usr/local/share/gstm/pixmaps/gSTM.png' ] && cp -f /compat/ubuntu/usr/share/gstm/pixmaps/gSTM.png /usr/local/share/gstm/pixmaps/gSTM.png
 fi
