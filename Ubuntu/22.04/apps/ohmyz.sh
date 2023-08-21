@@ -1,0 +1,17 @@
+#/bin/bash
+set -euo pipefail
+IFS=$'\n\t'
+
+if [ -n "$SUDO_USER" ]; then
+	user="$SUDO_USER"
+else
+	user='root'
+fi
+
+apt install -y zsh git-core
+
+if [ ! -d "/home/$user/.oh-my-zsh" ]; then
+	su -l $user -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+fi
+
+
