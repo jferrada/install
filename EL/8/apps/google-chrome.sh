@@ -2,6 +2,11 @@
 set -euo pipefail
 IFS=$'\n\t'
 
+if [ "$(id -u)" -ne 0  ]; then
+	echo "Este script debe ser ejecutado como root" 1>&2
+	exit 1
+fi
+
 echo '[google-chrome]
 name=google-chrome
 baseurl=http://dl.google.com/linux/chrome/rpm/stable/x86_64

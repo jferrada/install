@@ -31,4 +31,6 @@ dnf -y install git-crypt moreutils jq bc curl procps-ng which patch libyaml-deve
 
 bash apps/gstm.sh
 
-dnf -y install filezilla zsh qmmp qbittorrent keepass remmina 'remmina-plugins-*'
+dnf -y install filezilla zsh rclone epson-inkjet-printer-escpr qmmp qbittorrent keepass remmina 'remmina-plugins-*'
+
+reboot

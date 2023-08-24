@@ -2,6 +2,11 @@
 set -euo pipefail
 IFS=$'\n\t'
 
+if [ "$(id -u)" -ne 0  ]; then
+	echo "Este script debe ser ejecutado como root" 1>&2
+	exit 1
+fi
+
 dnf install -y intltool gtk3-devel libxml2-devel libappindicator-gtk3-devel
 
 if [ ! -e '/usr/local/bin/gstm' ]; then
@@ -12,3 +17,4 @@ if [ ! -e '/usr/local/bin/gstm' ]; then
 	cd ..
 	rm -rf gstm-*
 fi
+

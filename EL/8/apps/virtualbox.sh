@@ -2,8 +2,12 @@
 set -euo pipefail
 IFS=$'\n\t'
 
-user='root'
+if [ "$(id -u)" -ne 0  ]; then
+	echo "Este script debe ser ejecutado como root" 1>&2
+	exit 1
+fi
 
+user='root'
 if [ -n "$SUDO_USER" ]; then
 	user="$SUDO_USER"
 fi
