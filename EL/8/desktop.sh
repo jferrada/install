@@ -12,9 +12,10 @@ bash apps/google-chrome.sh
 bash apps/compress.sh
 bash apps/multimedia.sh
 bash apps/java.sh
-bash apps/libreoffice.sh
-bash apps/naps2.sh
+bash apps/samba.sh
+bash apps/ohmyz.sh
 
-dnf -y install simple-scan qmmp
+dnf -y install podman
+dnf -y install filezilla rclone qbittorrent
 
-
+reboot

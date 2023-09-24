@@ -7,6 +7,7 @@ if [ "$(id -u)" -ne 0  ]; then
 	exit 1
 fi
 
+bash apps/sshd.sh
 bash apps/kde.sh
 
 pkg install -y drm-510-kmod
@@ -31,9 +32,7 @@ bash apps/ohmyz.sh
 bash apps/samba.sh
 bash apps/vim.sh
 
-pkg install -y git-crypt moreutils
-
-pkg install -y rclone
+pkg install -y git-crypt moreutils rclone
 
 if [ -n "$SUDO_USER" ]; then
 	tmp=$(mktemp -d)
@@ -46,5 +45,5 @@ fi
 
 pkg install -y qmmp-qt6
 
-#reboot
+reboot
 

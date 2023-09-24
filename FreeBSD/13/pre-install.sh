@@ -14,7 +14,7 @@ portsnap extract
 
 pkg update && pkg upgrade
 
-pkg install -y fusefs-ntfs fusefs-exfat fusefs-ext2 fusefs-lkl git iftop htop vim curl wget sudo jq bash zsh dsbmc-cli dsbmc dsbmd
+pkg install -y fusefs-ntfs fusefs-exfat fusefs-ext2 fusefs-lkl git iftop htop vim curl wget sudo jq bash zsh dsbmc-cli dsbmc dsbmd base64
 
 sysrc -f /etc/rc.conf kld_list+=fusefs
 sysrc -f /etc/rc.conf dsbmd_enable=YES
@@ -38,7 +38,5 @@ echo 'kern.ipc.shm_allow_removed=1' >> /etc/sysctl.conf
 
 sed -i '' 's/:lang=C.UTF-8:/:lang=es_ES.UTF-8:/' /etc/login.conf
 cap_mkdb /etc/login.conf
-
-bash apps/sshd.sh
 
 reboot

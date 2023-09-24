@@ -12,25 +12,26 @@ bash apps/google-chrome.sh
 bash apps/compress.sh
 bash apps/multimedia.sh
 bash apps/java.sh
+bash apps/samba.sh
+bash apps/ohmyz.sh
+
 bash apps/libreoffice.sh
-bash apps/naps2.sh
+bash apps/virtualbox.sh
+bash apps/wine.sh
+
+bash apps/Ferdium.sh
+bash apps/gstm.sh
 
 #Impresoras/Escáneres
-dnf -y install simple-scan
-
-bash apps/wine.sh
-bash apps/virtualbox.sh
-bash apps/samba.sh
-bash apps/Ferdium.sh
+dnf -y install epson-inkjet-printer-escpr simple-scan
+bash apps/naps2.sh
 
 dnf -y install podman
 
-dnf -y install subversion git
+dnf -y install subversion git git-crypt moreutils jq bc curl procps-ng which patch libyaml-devel glibc-headers autoconf gcc-c++ glibc-devel patch readline-devel zlib-devel libffi-devel openssl-devel make bzip2 automake libtool bison sqlite-devel sudo
 
-dnf -y install git-crypt moreutils jq bc curl procps-ng which patch libyaml-devel glibc-headers autoconf gcc-c++ glibc-devel patch readline-devel zlib-devel libffi-devel openssl-devel make bzip2 automake libtool bison sqlite-devel sudo
+dnf -y install filezilla rclone qmmp qbittorrent keepass remmina 'remmina-plugins-*'
 
-bash apps/gstm.sh
-
-dnf -y install filezilla zsh rclone epson-inkjet-printer-escpr qmmp qbittorrent keepass remmina 'remmina-plugins-*'
+bash apps/google-cloud-cli.sh
 
 reboot
