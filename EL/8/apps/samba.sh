@@ -34,10 +34,6 @@ systemctl enable smb
 firewall-cmd --add-service=samba --permanent
 firewall-cmd --reload
 
-if ! pdbedit -L | grep -qE "$SUDO_USER:"; then
-	smbpasswd -a "$SUDO_USER"
-fi
-
 
 
 

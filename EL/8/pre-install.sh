@@ -16,7 +16,7 @@ dnf config-manager --set-enabled powertools
 dnf clean all && dnf makecache && dnf update -y --allowerasing && dnf -y autoremove
 
 dnf -y install dnf-plugins-core
-dnf -y install exfat-utils fuse fuse-exfat ntfs-3g ntfsprogs net-tools rsync git iftop iotop htop vim-enhanced sed curl wget sudo coreutils moreutils screen os-prober net-tools
+dnf -y install exfat-utils fuse fuse-exfat ntfs-3g ntfsprogs net-tools rsync git iftop iotop htop vim-enhanced sed curl wget sudo coreutils moreutils screen os-prober net-tools lm_sensors
 dnf -y install aspell hunspell-es
 
 grub2-mkconfig -o /boot/grub2/grub.cfg

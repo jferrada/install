@@ -8,16 +8,22 @@ if [ "$(id -u)" -ne 0  ]; then
 fi
 
 bash apps/sshd.sh
-
-pkg install -y desktop-installer
-
 bash apps/kde.sh
+
+pkg install -y drm-510-kmod
+# For amdgpu:
+#sysrc -f /etc/rc.conf kld_list+=amdgpu
+# For Intel: kld_list="i915kms"
+#sysrc -f /etc/rc.conf kld_list+=i915kms
+# For radeonkms: kld_list="radeonkms"
+#sysrc -f /etc/rc.conf kld_list+=radeonkms
+
 bash apps/compress.sh
 bash apps/java.sh
 bash apps/libreoffice.sh
 bash apps/ohmyz.sh
-bash apps/samba.sh
 bash apps/vim.sh
+bash apps/samba.sh
 
 pkg install -y moreutils rclone chromium
 

@@ -11,7 +11,12 @@ bash apps/sshd.sh
 bash apps/kde.sh
 
 pkg install -y drm-510-kmod
+# For amdgpu:
 sysrc -f /etc/rc.conf kld_list+=amdgpu
+# For Intel: kld_list="i915kms"
+#sysrc -f /etc/rc.conf kld_list+=i915kms
+# For radeonkms: kld_list="radeonkms"
+#sysrc -f /etc/rc.conf kld_list+=radeonkms
 
 bash apps/camera.sh
 

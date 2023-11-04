@@ -7,14 +7,14 @@ if [ "$(id -u)" -ne 0  ]; then
 	exit 1
 fi
 
-#freebsd-update fetch install
+freebsd-update fetch install
 
-#portsnap fetch
-#portsnap extract
+portsnap fetch
+portsnap extract
 
 pkg update && pkg upgrade
 
-pkg install -y fusefs-ntfs fusefs-exfat fusefs-ext2 fusefs-lkl git iftop htop vim curl wget sudo jq bash zsh dsbmc-cli dsbmc dsbmd base64 cpu-x
+pkg install -y fusefs-ntfs fusefs-exfat fusefs-ext2 fusefs-lkl git iftop htop vim curl wget sudo jq bash zsh dsbmc-cli dsbmc dsbmd base64
 
 sysrc -f /etc/rc.conf kld_list+=fusefs
 sysrc -f /etc/rc.conf dsbmd_enable=YES

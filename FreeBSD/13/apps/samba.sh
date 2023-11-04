@@ -31,10 +31,6 @@ echo "[global]
 sysrc -f /etc/rc.conf samba_server_enable=YES
 pgrep -qlf smbd || service samba_server start
 
-if ! pdbedit -L | grep -qE "$SUDO_USER:"; then
-	pdbedit -a -u "$SUDO_USER"
-fi
-
 
 
 

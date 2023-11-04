@@ -4,7 +4,7 @@ curl -ksL https://raw.githubusercontent.com/transcode-open/apt-cyg/master/apt-cy
 chmod +x /bin/apt-cyg
 
 apt-cyg update
-apt-cyg install git vim zsh
+apt-cyg install git zsh
 
 curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh
 
@@ -14,8 +14,9 @@ echo 'aWYgWyAtZiB+Ly5wcm9maWxlIF07IHRoZW4KCS4gfi8ucHJvZmlsZQpmaQo=' | base64 -d 
 
 echo 'IyBlZGl0b3IKW1sgLXogJEVESVRPUiBdXSAmJiBleHBvcnQgRURJVE9SPXZpbQoKIyBTU0ggYWdl
 bnQKZXhwb3J0IFNTSF9BVVRIX1NPQ0s9fi8uc3NoL3NzaC1hZ2VudC5zb2NrCnNzaC1hZGQgLWwg
-Mj4vZGV2L251bGwgPi9kZXYvbnVsbAppZiBbICQ/IC1nZSAyIF07IHRoZW4KICBzc2gtYWdlbnQg
-LWEgIiRTU0hfQVVUSF9TT0NLIiA+L2Rldi9udWxsCmZpCgo=' | base64 -d > ~/.profile
+Mj4vZGV2L251bGwgPi9kZXYvbnVsbAppZiBbICQ/IC1nZSAyIF07IHRoZW4KICBybSAtZiAiJFNT
+SF9BVVRIX1NPQ0siICYmIHNzaC1hZ2VudCAtYSAiJFNTSF9BVVRIX1NPQ0siID4vZGV2L251bGwK
+ZmkK' | base64 -d > ~/.profile
 
 echo 'ZXhwb3J0IFpTSD0iJEhPTUUvLm9oLW15LXpzaCIKClpTSF9USEVNRT0iamlzcHdvc28iCgpwbHVn
 aW5zPShnaXQpCgpzb3VyY2UgJFpTSC9vaC1teS16c2guc2gKCmlmIFsgLWYgfi8ucHJvZmlsZSBd
