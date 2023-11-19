@@ -1,4 +1,4 @@
-#/bin/bash
+#!/usr/bin/env bash
 set -euo pipefail
 IFS=$'\n\t'
 
@@ -7,7 +7,7 @@ if [ "$(id -u)" -ne 0  ]; then
 	exit 1
 fi
 
-dnf install -y vim
+apk add vim
 
 tmp=$(mktemp -d)
 echo 'set formatoptions-=cr

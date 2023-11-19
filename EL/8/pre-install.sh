@@ -21,6 +21,4 @@ dnf -y install aspell hunspell-es
 
 grub2-mkconfig -o /boot/grub2/grub.cfg
 
-bash apps/sshd.sh
-
 reboot
